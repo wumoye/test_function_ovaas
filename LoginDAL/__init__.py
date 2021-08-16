@@ -22,8 +22,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if id is None or password is None:
         return func.HttpResponse('Failed.No such user!', status_code=200)
     
-   
-    db_config = mysql_config_localhost()
+    db_config = mysql_config()
     sql_helper = MySQLHelper(db_config)
     
     sql = "select * from user where id=%s and password=%s"

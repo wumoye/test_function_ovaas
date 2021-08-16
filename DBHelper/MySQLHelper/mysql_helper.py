@@ -29,7 +29,7 @@ class MySQLHelper(DBHelper):
                 user=str(self.db_config.user),
                 passwd=str(self.db_config.password),
                 database=str(self.db_config.database),
-                # ssl=self.db_config.ssl,
+                ssl=self.db_config.ssl,
             )
             logging.info(" Connected to MySQL database [ {db} ]...".format(
                 db=self.db_config.database))

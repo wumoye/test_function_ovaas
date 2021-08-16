@@ -22,7 +22,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             password = req_body.get('password')
             email = req_body.get('email')
     
-    db_config = mysql_config_localhost()
+    db_config = mysql_config()
     sql_helper = MySQLHelper(db_config)
 
     create_datatime = str(datetime.datetime.now())
